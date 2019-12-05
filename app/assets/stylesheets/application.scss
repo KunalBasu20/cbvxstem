@@ -2,6 +2,7 @@
 /*
 *= require_tree
 *= require_self
+*= require simple_calendar
 */
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -13,12 +14,31 @@
 
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family:'Work Sans', 'Calibri', sans-serif;
   color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif;
 }
 
 .container {
   min-height: 1.7rem;
+}
+
+.leftBar{
+  float: left;
+}
+
+.right-container{
+  margin-left:150px;
+}
+p {
+    font-family: 'Work Sans', 'Calibri', sans-serif;
+}
+
+p b, p strong {
+    font-weight: 700;
 }
 
 /*
@@ -41,6 +61,7 @@ body {
 .nav-general-link  a {
   margin-top: 0;
   align-items: center;
+  border-radius: 8px 8px 0px 0px;
 }
 
 .blog-nav {
@@ -67,13 +88,13 @@ body {
   display: grid;
   height: 100%;
   width: 100%;
-  grid-template-areas: "left mid1 mid1 mid1 mid2 mid2 right1 right2"
-                       "left mid1 mid1 mid1 mid2 mid2 right1 right2"
-                       "left mid1 mid1 mid1 mid2 mid2 right1 right2"
-                       "left mid1 mid1 mid1 mid2 mid2 right1 right2"
-                       "left mid1 mid1 mid1 mid2 mid2 right1 right2";
+  grid-template-areas: "left mid1 mid1 mid1 mid2 mid2 right1 right1 right2"
+                       "left mid1 mid1 mid1 mid2 mid2 right1 right1 right2"
+                       "left mid1 mid1 mid1 mid2 mid2 right1 right1 right2"
+                       "left mid1 mid1 mid1 mid2 mid2 right1 right1 right2"
+                       "left mid1 mid1 mid1 mid2 mid2 right1 right1 right2";
 
-  grid-template-columns: repeat(8, 12%);
+  grid-template-columns: 10% 10% 10% 10% 10% auto 4% 10% 10%;
   grid-template-rows: repeat(5,20%);
 }
 
