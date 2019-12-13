@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe 'Homepage', type: :feature , js:true do
   include Warden::Test::Helpers
   fixtures :users
@@ -49,6 +48,5 @@ RSpec.describe 'Homepage', type: :feature , js:true do
     expect(page).to be_accessible.according_to(:wcag2a).checking(:list, "listitem")
     expect(page).to be_accessible.according_to(:wcag2a).checking(:tabindex, :accesskeys)
   end
-
 
 end
