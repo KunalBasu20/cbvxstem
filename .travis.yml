@@ -17,13 +17,11 @@ env:
     # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
     - TZ=America/Los_Angeles
 
-
 # steps to run BEFORE the test run
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
-
 
 script:
   # run RSpec tests, and capture coverage
@@ -39,3 +37,4 @@ after_script:
   # combine coverage from all suites, and upload to CodeClimate --> left side of pipe
   - ./cc-test-reporter sum-coverage coverage/codeclimate.*.json | ./cc-test-reporter upload-coverage
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
